@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="meuBotao">Clique em mim</button>
+
+    <script>
+        function botao() {
+            const meuBotao = document.getElementById('meuBotao');
+            meuBotao.addEventListener('click', function(){
+                console.log("O Botão Foi clicado!")
+            })
+        }
+        botao()
+    </script>
+</body>
+</html>
