@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="botaoA">Botão A</button>
+    <button id="botaoB">Botão B</button>
+
+    <script>
+        function botao() {
+            const botaoA = document.getElementById('botaoA');
+            const botaoB = document.getElementById('botaoB');
+
+            const hamdleClick = () =>{
+                botaoB.removeEventListener('click',hamdleClickB)
+                console.log("Botao A foi clicado")
+            }
+            const hamdleClickB = () =>{
+                botaoA.removeEventListener('click',hamdleClick)
+                console.log("Botao B foi clicado")
+            }
+            
+            
+            botaoA.addEventListener('click', hamdleClick)
+            botaoB.addEventListener('click', hamdleClickB)
+            
+        }
+        botao()
+    </script>
+</body>
+</html>
